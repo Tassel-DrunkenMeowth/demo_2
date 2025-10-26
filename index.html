@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Upload Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 左侧信息区 -->
+    <section class="info-section">
+      <h1>Finish! Upload Your Resume</h1>
+      <p>Upload your resume, the platform will help you parse and optimize, you can also skip this step</p>
+      <div class="step-indicator">1</div>
+      <img src="1.png" alt="Illustration" class="illustration" width="490" height="320">
+    </section>
+
+    <!-- 右侧上传区 -->
+    <section class="upload-section">
+      <h2>Upload file</h2>
+      <div class="upload-area" id="uploadArea">
+        <img src="cloud-icon.svg" alt="Cloud upload icon" class="upload-icon">
+        <p>Drag your resume file to this area, or click on the area to select the appropriate file to upload</p>
+        <input type="file" id="fileInput" accept=".pdf,.doc,.docx" class="file-input">
+        <p id="fileName" class="file-name">No file selected</p>
+      </div>
+      <div class="button-group">
+        <button class="btn btn-last">Last step</button>
+        <button class="btn btn-finish">Finish</button>
+      </div>
+      <!-- 进度条 -->
+      <div class="progress-bar">
+        <div class="progress-step completed">
+          <span class="step-number">1</span>
+        </div>
+        <div class="progress-step completed">
+          <span class="step-number">2</span>
+        </div>
+        <div class="progress-step pending">
+          <span class="step-number">3</span>
+        </div>
+        <div class="progress-line completed-line"></div>
+        <div class="progress-line pending-line"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

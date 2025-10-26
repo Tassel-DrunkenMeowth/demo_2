@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 左侧信息区样式 */
+.info-section {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-section h1 {
+  font-size: 28px;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.info-section p {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.step-indicator {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #3b82f6;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+
+.illustration {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 右侧上传区样式 */
+.upload-section {
+  flex: 1;
+  min-width: 300px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.upload-section h2 {
+  font-size: 20px;
+  color: #1f2937;
+  margin-bottom: 24px;
+}
+
+.upload-area {
+  border: 2px dashed #bfdbfe;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  background-color: #f9fbff;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.upload-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 12px;
+}
+
+.upload-area p {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-name {
+  font-size: 13px;
+  color: #374151;
+  margin-top: 8px;
+}
+
+/* 按钮组（居中显示） */
+.button-group {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 40px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 24px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-last {
+  background-color: #bfdbfe;
+  color: #3b82f6;
+}
+
+.btn-last:hover {
+  background-color: #93c5fd;
+}
+
+.btn-finish {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btn-finish:hover {
+  background-color: #2563eb;
+}
+
+/* 进度条 样式 */
+.progress-bar {
+  display: flex;
+  margin-top: 100px;
+  align-items: center;
+  position: relative;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.progress-step {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: 15%;
+  margin-right: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+/* 完成状态的步骤 */
+.completed {
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* 未完成状态的步骤 */
+.pending {
+  background-color: #bfdbfe;
+  color: #3b82f6;
+}
+
+/* 进度线条 */
+.progress-line {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  border-radius: 2px;
+}
+
+/* 已完成的线条 */
+.completed-line {
+  background-color: #3b82f6;
+  width: 70%; /* 前两步完成，占50%宽度 */
+  left: 0;
+}
+
+/* 未完成的线条 */
+.pending-line {
+  background-color: #bfdbfe;
+  width: 30%; /* 第三步未完成，剩余50%宽度 */
+  right: 0;
+}
+
+/* 响应式样式：小屏幕上下布局 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .info-section, .upload-section {
+    min-width: 100%;
+  }
+  .progress-bar {
+    width: 90%;
+  }
+}
