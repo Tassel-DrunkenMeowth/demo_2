@@ -182,13 +182,13 @@ body {
 
 .completed-line {
   background-color: #3b82f6;
-  width: 70%; 
+  width: 85%; 
   left: 0;
 }
 
 .pending-line {
   background-color: #bfdbfe;
-  width: 30%; 
+  width: 15%; 
   right: 0;
 }
 
