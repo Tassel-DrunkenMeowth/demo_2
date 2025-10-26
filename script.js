@@ -2,7 +2,6 @@ const uploadArea = document.getElementById('uploadArea');
 const fileInput = document.getElementById('fileInput');
 const fileName = document.getElementById('fileName');
 
-// 点击上传区域触发文件选择
 uploadArea.addEventListener('click', () => {
   fileInput.click();
 });

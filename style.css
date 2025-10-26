@@ -18,7 +18,7 @@ body {
   margin: 0 auto;
 }
 
-/* 左侧信息区样式 */
+/* 左边 */
 .info-section {
   flex: 1;
   min-width: 300px;
@@ -57,7 +57,7 @@ body {
   display: block;
 }
 
-/* 右侧上传区样式 */
+/* 右边 */
 .upload-section {
   flex: 1;
   min-width: 300px;
@@ -105,7 +105,6 @@ body {
   margin-top: 8px;
 }
 
-/* 按钮组（居中显示） */
 .button-group {
   display: flex;
   gap: 16px;
@@ -140,7 +139,6 @@ body {
   background-color: #2563eb;
 }
 
-/* 进度条 样式 */
 .progress-bar {
   display: flex;
   margin-top: 100px;
@@ -164,19 +162,16 @@ body {
   z-index: 1;
 }
 
-/* 完成状态的步骤 */
 .completed {
   background-color: #3b82f6;
   color: white;
 }
 
-/* 未完成状态的步骤 */
 .pending {
   background-color: #bfdbfe;
   color: #3b82f6;
 }
 
-/* 进度线条 */
 .progress-line {
   position: absolute;
   top: 50%;
@@ -185,21 +180,19 @@ body {
   border-radius: 2px;
 }
 
-/* 已完成的线条 */
 .completed-line {
   background-color: #3b82f6;
-  width: 70%; /* 前两步完成，占50%宽度 */
+  width: 70%; 
   left: 0;
 }
 
-/* 未完成的线条 */
 .pending-line {
   background-color: #bfdbfe;
-  width: 30%; /* 第三步未完成，剩余50%宽度 */
+  width: 30%; 
   right: 0;
 }
 
-/* 响应式样式：小屏幕上下布局 */
+
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
